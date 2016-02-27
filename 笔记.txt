@@ -1,0 +1,198 @@
+大多数现代浏览器都支持Canvas元素及其主要特性，但是IE还不支持这些，至少在IE9之前的版
+本是不支持的。可以在Canvas元素的后备内容中添加一条友好的消息，告诉IE的用户应该升级
+他们的浏览器。另外的方法是使用强大的ExplorerCanvas脚本,Canvas元素就能够在IE9之前的
+版本上正常运行了。
+WordPress
+HTML5时代的前端
+--各种端的兼容开发(PC,移动端)
+--移动APP开发和移动站点开发
+--Ajax+服务器端技术开发
+--高级设计模式和框架(MVC,AngularJS)
+--自动化工作流(Grunt)
+--网站安全，SEO，测试，源代码管理，团队合作
+--HTML5游戏
+<meta> 元素可提供有关页面的元信息（meta-information），比如针对搜索引擎和更新频度
+的描述和关键词。
+<meta> 标签位于文档的头部，不包含任何内容。<meta> 标签的属性定义了与文档相关联的名
+称/值对
+
+html5中完全去掉了<u>、<font>、<center>、<strike>、<small>、<tt>等等这些标签。
+<b>和<i>标签依然存在,但是意义与之前不一样了,现在只是为了将一段文字标识出来。
+新标准使用了一些全新的表单输入对象,包括日期,URL,Email地址,其他的对象则增加了
+对非拉丁字符的支持。html5还引入了微数据,一种使用机器可以识别的标签标注内容的
+方法，使语义Web的处理更为简单。
+
+新应用程序接口(API)
+除了原先的DOM接口,HTML5增加了更多API,如:
+1.用于即时2D绘图的Canvas标签
+2.定时媒体回放
+3.离线数据库存储
+4.文档编辑
+5.拖拽控制
+6.浏览历史管理
+
+与html4的不同之处
+新的解析顺序新的元素:section,video,progress,nav,meter,time,aside,canvas.
+input元素的新属性:日期和时间,email,url。
+新的通用属性:ping,charset,async全域属性:id,tabindex,repeat。
+移除元素:center,font,strike.
+HTML5有两大特点:
+首先,强化了Web网页的表现性能。除了可描绘二维图形外，还准备了用于播放视频和音频的标签。
+其次,追加了本地数据库等Web应用的功能。
+
+新特性
+HTML5的一些有趣的新特性:
+用于绘画的canvas元素;
+用于媒介回放的video和audio元素;
+对本地离线存储的更好的支持;
+新的特殊内容元素,比如article、footer、header、nav、section、aside.
+新的表单控件,比如calendar、date、time、email、url、search.
+
+浏览器支持
+最新版本的Safari、Chrome、Firefox以及Opera支持某些HTML5特性。IE9将支持某些HTML5特性。
+
+
+html5
+1.<video>标记
+  定义和用法:
+  <video>标签定义视频,比如电影片段或其他视频流
+  实例:
+  一段简单的HTML5视频
+  <video width="320" height="240"controls="controls">
+	<source src="movie.ogg" type="video/ogg">
+	<source src="movie.mp4" type="video/mp4">
+	您的浏览器不支持video标签。
+  </video>
+   注意:ogg = 带有Thedora视频编码和Vorbis音频编码的ogg文件。
+	mp4 = 带有H.264视频编码和AAC音频编码的MPEG4文件。
+	WebM = 带有VP8视频编码和Vorbis音频编码的WebM文件。
+	Firfox 3.5+,Opera 10.5+,Chrome 5.0+支持Ogg格式。
+	IE 9+,Chrome 5.0+,Safari3.0+支持MPEG4格式。
+	Firefox 4.0+,Opera 10.6+,Chrome 6.0+支持WebM格式。
+2.<audio>标记
+ 定义和用法:
+ <audio>标签定义声音,比如音乐或其他音频流。
+ 实例:
+ 一段简单的HTML5音频
+ <audio src="someaudio.wav">
+ 您的浏览器不支持audio标签。
+ </audio>
+ 音频格式:
+ 当前,audio元素支持三种音频格式:
+            IE9  Firefox 3.5 Opera 10.5 Chrome 3.0 Safari 3.0 
+Ogg Vorbis  不      支持        支持       支持        不   
+MP3         支持     不          不        支持       支持
+Wav         不      支持        支持        不        支持
+3.<canvas>标记
+定义和用法:<canvas>标签定义图形,比如图表和其他图像。
+实例:
+如何通过canvas元素来显示一个红色的矩形:
+<canvas id="mycanvas"></canvas>
+<script>
+var mycanvas = document.getElementById('mycanvas');
+var ctx = mycanvas.getContext('2d');
+ctx.fillStyle="#f00";
+ctx.fillRect(0,0,80,100);
+</script>
+什么是Canvas?
+HTML5的canvas元素使用Javascript在网页上绘制图像。
+画布是一个矩形区域，您可以控制其每一像素。
+canvas拥有多种绘制路径、矩形、圆形、字符以及添加图像的方法。
+4.HTML5新的Input类型
+email、url、number、range、Date pickers(date、month、week、datetime、datetime-local
+)、search、color
+浏览器支持
+Input type    IE  Firefox  Opera  Chrome  Safari
+email         No   4.0       9.0   10.0    No
+url           No   4.0       9.0   10.0    No
+number        No   No        9.0    7.0    No
+range         No   No        9.0    4.0    4.0
+Date pickers  No   No        9.0   10.0    No
+search        No   4.0       11.0  10.0    No
+color         No   No        11.0    No    No
+注释：Opera 对新的输入类型的支持最好。不过您已经可以在所有主流的浏览器中使用它们了。即使不被支
+持，仍然可以显示为常规的文本域。
+(1)Input 类型 - email
+email 类型用于应该包含 e-mail 地址的输入域。
+在提交表单时，会自动验证 email 域的值。
+实例E-mail: <input type="email" name="user_email" />
+(2)Input 类型 - url
+url 类型用于应该包含 URL 地址的输入域。
+在提交表单时，会自动验证 url 域的值。
+实例Homepage: <input type="url" name="user_url" />
+(3)Input 类型 - number
+number 类型用于应该包含数值的输入域。
+您还能够设定对所接受的数字的限定：
+实例Points: <input type="number" name="points" min="1" max="10" />
+(4)Input 类型 - range
+range 类型用于应该包含一定范围内数字值的输入域。
+range 类型显示为滑动条。
+您还能够设定对所接受的数字的限定：
+实例<input type="range" name="points" min="1" max="10" />
+(5)Input 类型 - Date Pickers（数据检出器）
+HTML 5 拥有多个可供选取日期和时间的新输入类型：
+date - 选取日、月、年
+month - 选取月、年
+week - 选取周和年
+time - 选取时间（小时和分钟）
+datetime - 选取时间、日、月、年（UTC 时间）
+datetime-local - 选取时间、日、月、年（本地时间）
+下面的例子允许您从日历中选取一个日期：
+实例Date: <input type="date" name="user_date" />
+(6)Input 类型 - search
+search 类型用于搜索域，比如站点搜索或 Google 搜索。
+search 域显示为常规的文本域。
+5.html5新的表单元素
+datalist、keygen、output
+浏览器支持
+Input type  IE  Firefox  Opera  Chrome  Safari
+datalist    No    No      9.5     No     No
+keygen      No    No     10.5    3.0     No
+output      No    No      9.5     No     No
+1)datalist  元素
+datalist 元素规定输入域的选项列表。
+列表是通过 datalist 内的 option 元素创建的。
+如需把 datalist 绑定到输入域，请用输入域的 list 属性引用 datalist 的 id：
+实例
+Webpage: <input type="url" list="url_list" name="link" />
+<datalist id="url_list">
+<option label="W3School" value="http://www.W3School.com.cn" />
+<option label="Google" value="http://www.google.com" />
+<option label="Microsoft" value="http://www.microsoft.com" />
+</datalist>
+提示：option 元素永远都要设置 value 属性。
+2)
+
+
+
+
+
+1.页面布局
+2.代码优化
+3.API接入(调试) HTML JS
+
+1.超文本:所谓超文本,是因为它可以加入图片，声音，动画和影视等内容
+，事实上每一个HTML文档都是一种静态的网页文件。
+2.html标签分类
+可视化标签:能够设置样式，而且能够在网页内容区域显示div,html,body,p,img
+非可视化标签:不能设置样式,不能在网页内容区域可见style,head,script,meta,title
+3.id  选择器   他是唯一         #
+class 类选择器 可以重复使用多个 .
+4.Html注释,body中注释
+<!--这是一段注释。注释不会在浏览器中显示-->
+5.标题标签
+<h1>...<h6>标题定义
+<h1>定义为最大标题
+<h6>定义为最小标题
+6.加粗和斜体
+  字体加粗标签:<strong></strong>和<b></b>都是字体加粗效果.
+  注意:<strong>起强调作用
+  字体斜体标签:<em></em>和<i></i>都是字体斜体标签.
+  注意:<em>起强调作用
+7.超链接和锚标记
+  (1)超链接:    行内元素
+  <a>标签可以通过从一个页面跳转到另外一个页面。
+  语法:<a href="跳转路径">文本显示</a>
+  (2)锚标记
+  相当于标签,当使用锚标记时,可以创建直接跳至该命名锚标记链接。
+  语法:<a href="自定义锚标记"></a>
